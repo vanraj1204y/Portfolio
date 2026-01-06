@@ -744,9 +744,9 @@
                     <!-- UPDATED DOWNLOAD BUTTON -->
                     <!-- The 'download' attribute forces the browser to save the file instead of opening it. -->
                     <!-- Ensure Vanraj-Resume.pdf is in the same folder as this HTML file. -->
-                    <button onclick="downloadResume()" class="btn btn-outline">
+                    <a href="vanraj-resume.pdf" class="btn btn-outline" download>
                         Download CV <i class="fas fa-download"></i>
-                    </button>
+                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -1179,21 +1179,6 @@
                 }, 3000);
             }, 1500);
         });
-
-        function downloadResume() {
-            fetch("vanraj-resume.pdf")
-                .then(response => response.blob())
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement("a");
-                    a.href = url;
-                    a.download = "vanraj-resume.pdf";
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                    window.URL.revokeObjectURL(url);
-                });
-        }
     </script>
 </body>
 </html>
