@@ -509,7 +509,7 @@
         }
 
         .project-img {
-            height: 220px;
+            height: 350px;
             background-color: #2c3546;
             overflow: hidden;
             position: relative;
@@ -714,7 +714,7 @@
     <header id="main-header">
         <div class="container">
             <nav>
-                <a href="#" class="logo">Bavliya<span class="text-gradient">.Dev</span></a>
+                <a href="#" class="logo">Bavliya <span class="text-gradient">Vanraj</span></a>
                 <div class="mobile-toggle" id="menuBtn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -754,7 +754,7 @@
                         <p>Years Exp.</p>
                     </div>
                     <div class="stat-item">
-                        <h4>15+</h4>
+                        <h4>5+</h4>
                         <p>Projects Done</p>
                     </div>
                     <div class="stat-item">
@@ -826,6 +826,7 @@
                     <div class="skill-tags">
                         <span class="tag">PHP</span>
                         <span class="tag">Laravel</span>
+                        <span class="tag">Codeigniter</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">REST APIs</span>
@@ -852,9 +853,25 @@
                         <span class="tag">Stripe</span>
                         <span class="tag">Razorpay</span>
                         <span class="tag">GitHub</span>
+                        <span class="tag">Git</span>
                         <span class="tag">Composer</span>
                         <span class="tag">AWS</span>
                         <span class="tag">Webpack</span>
+                    </div>
+                </div>
+
+                <!-- Third-Party APIs -->
+                <div class="skill-card">
+                    <h3><i class="fas fa-plug"></i> Third-Party APIs & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Blogger API</span>
+                        <span class="tag">Facebook API</span>
+                        <span class="tag">WordPress REST API</span>
+                        <span class="tag">Joomla</span>
+                        <span class="tag">Namecheap API</span>
+                        <span class="tag">Vimeo API</span>
+                        <span class="tag">Twitter API</span>
+                        <span class="tag">Tumblr API</span>
                     </div>
                 </div>
             </div>
@@ -866,35 +883,68 @@
         <div class="container">
             <div class="section-header fade-in-up">
                 <h2>Experience History</h2>
-                <p>My professional journey in tech industry.</p>
+                <p>My professional journey, technical expertise, and key project contributions.</p>
             </div>
 
             <div class="timeline fade-in-up">
+
+                <!-- Work Experience -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">Jul 2023 - Present</span>
-                        <h3>Laravel Developer</h3>
+                        <h3>Laravel / Full Stack Web Developer</h3>
                         <h4>Pranshtech Solutions</h4>
                         <ul>
-                            <li>Developed and maintained Laravel-based web apps with optimized backend logic.</li>
-                            <li>Built and integrated RESTful APIs for mobile and web applications.</li>
-                            <li>Integrated payment gateways (Stripe, Razorpay) with secure webhooks.</li>
-                            <li>Implemented Node.js modules for real-time chat features.</li>
-                            <li>Managed MySQL databases ensuring data integrity and security.</li>
+                            <li>Developed and maintained robust Laravel-based web applications with clean MVC architecture.</li>
+                            <li>Created and consumed RESTful APIs using JSON for seamless frontend and mobile integration.</li>
+                            <li>Integrated third-party services including payment gateways (Stripe, Razorpay) with secure webhook handling.</li>
+                            <li>Worked with Node.js modules for real-time features such as chat and background task processing.</li>
+                            <li>Handled MySQL database design, optimization, and secure data management.</li>
+                            <li>Implemented role-based authentication, authorization, and admin panels.</li>
+                            <li>Collaborated closely with UI/UX teams using Metronic theme, HTML, CSS, JavaScript, jQuery, and AJAX.</li>
+                        </ul>
+
+                        <p style="margin-top: 12px; color: var(--text-muted);">
+                            <strong>Key Projects:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>CRM & Business Management System</strong> – 
+                                Developed modules for user management, lead tracking, reporting, and role-based access control.
+                            </li>
+                            <li>
+                                <strong>E-Commerce Platform</strong> – 
+                                Implemented product management, cart, checkout flow, online payments, and order tracking.
+                            </li>
+                            <li>
+                                <strong>Real-Time Chat System</strong> – 
+                                Built a Node.js powered chat feature integrated with Laravel for instant user communication.
+                            </li>
+                            <li>
+                                <strong>API-Based Backend Systems</strong> – 
+                                Designed secure APIs for mobile and web apps with token-based authentication.
+                            </li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Education -->
                 <div class="timeline-item">
                     <div class="timeline-dot" style="border-color: var(--accent-secondary);"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">Jun 2020 - May 2023</span>
                         <h3>Bachelor of Computer Applications (BCA)</h3>
                         <h4>Maharaja Krishnakumarsinhji University</h4>
-                        <p style="color: var(--text-muted);">Grade: A+ | Major Project: Farmers Choice</p>
+                        <p style="color: var(--text-muted);">
+                            Grade: A+ <br>
+                            <strong>Major Project: Farmers Choice</strong><br>
+                            A farmer-to-farmer digital marketplace platform featuring secure authentication, product listings,
+                            admin approval workflow, and real-time communication between users.
+                        </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -908,86 +958,121 @@
             </div>
 
             <div class="projects-grid">
+
                 <!-- Project 1 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="https://picsum.photos/seed/farmers/600/400" alt="Farmers Choice">
+                        <img src="textdrip.webp" alt="Textdrip">
                     </div>
                     <div class="project-info">
-                        <h3>Farmers Choice</h3>
-                        <p>Agricultural platform connecting farmers with markets. Built as a major university project.</p>
+                        <h3>TextDrip (SaaS Platform)</h3>
+                        <p>
+                            Subscription-based SaaS platform providing automated messaging and drip campaigns
+                            for US-based businesses with role-based access and campaign management.
+                        </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">Laravel</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">REST API</span>
                             <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">JS</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                            View Details
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
+                <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="https://picsum.photos/seed/textdrip/600/400" alt="Textdrip">
+                        <img src="Farmers-Choice.png" alt="Farmers Choice">
                     </div>
                     <div class="project-info">
-                        <h3>Textdrip</h3>
-                        <p>Automated messaging and drip campaign tool for marketing.</p>
+                        <h3>Farmers Choice</h3>
+                        <p>
+                            A farmer-to-farmer digital marketplace developed as a university major project,
+                            enabling product listings, secure authentication, admin approvals, and real-time communication.
+                        </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">Laravel</span>
-                            <span class="tech-pill">API</span>
+                            <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Bootstrap</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                            View Details
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card fade-in-up" style="transition-delay: 0.2s;">
+                <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="https://picsum.photos/seed/society/600/400" alt="Society Management">
+                        <img src="Society-Management-System.png" alt="Society Management System">
                     </div>
                     <div class="project-info">
-                        <h3>Society Management</h3>
-                        <p>Comprehensive system for managing residential society operations.</p>
+                        <h3>Society Management System</h3>
+                        <p>
+                            A comprehensive web-based system for managing residential societies including
+                            member records, maintenance tracking, notices, and admin controls.
+                        </p>
                         <div class="tech-stack">
                             <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">MySQL</span>
                             <span class="tech-pill">Bootstrap</span>
+                            <span class="tech-pill">jQuery</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                            View Details
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="https://picsum.photos/seed/marketing/600/400" alt="Manage Marketing">
+                        <img src="Marketing-Management-System.png" alt="Marketing Management System">
                     </div>
                     <div class="project-info">
-                        <h3>Manage Marketing</h3>
-                        <p>Tool to streamline campaigns and track lead performance.</p>
+                        <h3>Marketing Management System</h3>
+                        <p>
+                            A web-based tool to manage marketing campaigns, leads, and performance tracking
+                            with dynamic dashboards and AJAX-based data handling.
+                        </p>
                         <div class="tech-stack">
                             <span class="tech-pill">Laravel</span>
                             <span class="tech-pill">AJAX</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">MySQL</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                            View Details
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
                 <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
                     <div class="project-img">
-                        <img src="https://picsum.photos/seed/sprint/600/400" alt="Sprint Tool">
+                        <img src="Sprint-Management-Tool.png" alt="Sprint Management Tool">
                     </div>
                     <div class="project-info">
-                        <h3>Sprint Tool</h3>
-                        <p>Project management utility for tracking sprints and team productivity.</p>
+                        <h3>Sprint Management Tool</h3>
+                        <p>
+                            A project and sprint tracking tool designed to monitor team productivity,
+                            task progress, and sprint cycles using a modern frontend and API-driven backend.
+                        </p>
                         <div class="tech-stack">
                             <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">REST API</span>
                             <span class="tech-pill">React</span>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                            View Details
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1020,7 +1105,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
+    <!-- <section id="contact" class="section-padding">
         <div class="container">
             <div class="contact-wrapper fade-in-up">
                 <div class="section-header">
@@ -1070,11 +1155,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Bavliya Vanraj. Built with expertise.</p>
+            <p>&copy; 2026 Bavliya Vanraj. Built with expertise.</p>
         </div>
     </footer>
 
