@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -552,7 +552,7 @@
             margin-bottom: 20px;
         }
 
-        .tech-pill {
+        .tech-stack span {
             font-size: 0.75rem;
             background: rgba(255,255,255,0.05);
             color: var(--text-main);
@@ -706,6 +706,84 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        .view-project{
+            width: 100%;
+            justify-content: center;
+            padding: 10px;
+        }
+        .send-message-btn{
+            width: 100%;
+            justify-content: center;
+        }
+
+        .captcha-wrapper {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+        }
+
+        /* LEFT SIDE */
+        .captcha-left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha-text {
+            user-select: none;
+            background: #222;
+            color: #fff;
+            padding: 10px 14px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            border-radius: 6px;
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* REFRESH BUTTON */
+        .refresh-btn {
+            background: #333;
+            border: none;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .refresh-btn:hover {
+            background: #555;
+        }
+
+        /* RIGHT SIDE */
+        .captcha-right {
+            width: 50%;
+        }
+
+        .captcha-right .form-control::placeholder {
+            color: #888;
+        }
+        small {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+#toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #0d6efd;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
     </style>
 </head>
 <body>
@@ -740,11 +818,7 @@
                 
                 <div style="display: flex; gap: 15px; flex-wrap: wrap;">
                     <a href="#projects" class="btn btn-primary">View Portfolio <i class="fas fa-arrow-right"></i></a>
-                    
-                    <!-- UPDATED DOWNLOAD BUTTON -->
-                    <!-- The 'download' attribute forces the browser to save the file instead of opening it. -->
-                    <!-- Ensure Vanraj-Resume.pdf is in the same folder as this HTML file. -->
-                    <a href="vanraj-resume.pdf" class="btn btn-outline" download>
+                    <a href="Vanraj-Resuam" class="btn btn-outline" download>
                         Download CV <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -962,21 +1036,21 @@
                 <!-- Project 1 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="textdrip.webp" alt="Textdrip">
+                        <img src="textdrip.png" alt="Textdrip">
                     </div>
                     <div class="project-info">
-                        <h3>TextDrip (SaaS Platform)</h3>
+                        <h3>Text Message Marketing (SaaS Platform)</h3>
                         <p>
                             Subscription-based SaaS platform providing automated messaging and drip campaigns
                             for US-based businesses with role-based access and campaign management.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">Laravel</span>
-                            <span class="tech-pill">Node.js</span>
-                            <span class="tech-pill">REST API</span>
-                            <span class="tech-pill">MySQL</span>
+                            <span>Laravel</span>
+                            <span>Node.js</span>
+                            <span>REST API</span>
+                            <span>MySQL</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                        <a href="javascript:void(0)" class="btn btn-outline view-project">
                             View Details
                         </a>
                     </div>
@@ -994,12 +1068,12 @@
                             enabling product listings, secure authentication, admin approvals, and real-time communication.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">PHP</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">JavaScript</span>
-                            <span class="tech-pill">Bootstrap</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                        <a href="javascript:void(0)" class="btn btn-outline view-project">
                             View Details
                         </a>
                     </div>
@@ -1017,12 +1091,12 @@
                             member records, maintenance tracking, notices, and admin controls.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">PHP</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">Bootstrap</span>
-                            <span class="tech-pill">jQuery</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                            <span>jQuery</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                        <a href="javascript:void(0)" class="btn btn-outline view-project">
                             View Details
                         </a>
                     </div>
@@ -1040,12 +1114,12 @@
                             with dynamic dashboards and AJAX-based data handling.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">Laravel</span>
-                            <span class="tech-pill">AJAX</span>
-                            <span class="tech-pill">JavaScript</span>
-                            <span class="tech-pill">MySQL</span>
+                            <span>Laravel</span>
+                            <span>AJAX</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                        <a href="javascript:void(0)" class="btn btn-outline view-project">
                             View Details
                         </a>
                     </div>
@@ -1063,12 +1137,76 @@
                             task progress, and sprint cycles using a modern frontend and API-driven backend.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-pill">Node.js</span>
-                            <span class="tech-pill">REST API</span>
-                            <span class="tech-pill">React</span>
+                            <span>Node.js</span>
+                            <span>REST API</span>
+                            <span>React</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" style="width: 100%; justify-content: center; padding: 10px;">
+                        <a href="javascript:void(0)" class="btn btn-outline view-project">
                             View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="project-img">
+                        <img src="iotzone.png" alt="IoTZone - Tech & Electronics Platform">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>IoTZone – Tech & Electronics Platform</h3>
+
+                        <p>
+                            A full-featured technology and electronics content platform focused on microcontrollers,
+                            electronic components, tutorials, and technical guides. The website is built with
+                            SEO-first architecture, fast-loading UI, and a custom admin panel for content management.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>SEO</span>
+                            <span>Admin Panel</span>
+                        </div>
+
+                        <a href="https://iotzone.in/" target="_blank" class="btn btn-outline view-project">
+                            Visit Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card fade-in-up" style="transition-delay: 0.15s;">
+                    <div class="project-img">
+                        <!-- Replace this image with your website screenshot or logo -->
+                        <img src="codemastertool.png" alt="CodeMasterTool - Online Code Compiler & Developer Tools">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>CodeMasterTool - Online Code Compiler & Utilities</h3>
+                        <p>
+                            CodeMasterTool is a free, web-based developer platform that allows users to write,
+                            execute, and test code across multiple programming languages. The platform also
+                            provides powerful utility tools such as QR code generator, age calculator, website
+                            analyzer, and code validators — all accessible without registration.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Code Compiler</span>
+                            <span>Multi-Language Support</span>
+                            <span>SEO Optimized</span>
+                        </div>
+
+                        <a href="https://codemastertool.com/" target="_blank" class="btn btn-outline view-project">
+                            Visit Website
                         </a>
                     </div>
                 </div>
@@ -1105,7 +1243,7 @@
     </section>
 
     <!-- Contact Section -->
-    <!-- <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding" style="display: none;">
         <div class="container">
             <div class="contact-wrapper fade-in-up">
                 <div class="section-header">
@@ -1116,30 +1254,33 @@
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Get In Touch</h3>
-                        <p style="color: var(--text-muted);">I am currently available for freelance projects and full-time opportunities. Send me an email to get started.</p>
-                        
+                        <p style="color: #aaa;">
+                            I am currently available for freelance projects and full-time opportunities.
+                        </p>
+
                         <div class="contact-methods">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <small style="color: var(--text-muted);">Email</small>
+                                    <small>Email</small>
                                     <div>kolivanraj1204y@gmail.com</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- FORM -->
                     <div class="contact-form">
                         <form id="hireForm">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
+                                <input type="email" id="email" class="form-control" placeholder="Your Email">
                             </div>
                             <div class="form-group">
-                                <select class="form-control" style="cursor: pointer;">
-                                    <option>Project Type</option>
+                                <select id="projectType" class="form-control">
+                                    <option value="">Project Type</option>
                                     <option>Full Stack Web App</option>
                                     <option>API Development</option>
                                     <option>E-commerce</option>
@@ -1147,24 +1288,37 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" placeholder="Project Details" required></textarea>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Project Details"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                            <div class="form-group">
+                                <div class="captcha-wrapper" id="captchaMessage">
+                                    <div class="captcha-right">
+                                        <input type="text" id="captchaInput" class="form-control" placeholder="Enter CAPTCHA" autocomplete="off">
+                                    </div>
+                                    <div class="captcha-left">
+                                        <button type="button" id="refreshCaptcha" class="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+                                        <div id="captchaText" class="captcha-text" oncopy="return false" onselectstart="return false"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary send-message-btn">Send Message</button>
+                            <div id="showToast"></div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Bavliya Vanraj. Built with expertise.</p>
+            <p>&copy; <span id="CurrentYear"></span> Bavliya Vanraj. Built with expertise.</p>
         </div>
     </footer>
 
     <!-- JavaScript for Interactivity -->
     <script>
+        document.getElementById("CurrentYear").innerText = new Date().getFullYear();
         // 1. Mobile Menu Toggle
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
@@ -1242,28 +1396,137 @@
                 }
             });
         });
+        let captchaValue = "";
+        const MAX_LIMIT = 2;
 
-        // 4. Form Submission Simulation
-        document.getElementById('hireForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Sending...';
-            btn.style.opacity = '0.7';
-            
+        /* ================= CAPTCHA ================= */
+        function generateCaptcha() {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            captchaValue = "";
+            for (let i = 0; i < 6; i++) {
+                captchaValue += chars[Math.floor(Math.random() * chars.length)];
+            }
+            document.getElementById("captchaText").innerText = captchaValue;
+        }
+
+        document.getElementById("refreshCaptcha").addEventListener("click", generateCaptcha);
+
+        /* ================= ERROR SYSTEM (NO HTML SMALL) ================= */
+        function getErrorEl(input) {
+            let error = input._errorEl;
+
+            if (!error) {
+                error = document.createElement("small");
+                error.style.color = "red";
+                error.style.display = "none";
+                error.style.fontSize = "12px";
+                error.style.marginTop = "4px";
+                error.style.display = "block";
+
+                // insert AFTER input or captcha-row
+                if (input.parentElement.classList.contains("captcha-row")) {
+                    input.parentElement.after(error);
+                } else {
+                    input.after(error);
+                }
+
+                input._errorEl = error;
+            }
+
+            return error;
+        }
+
+        function showError(input, msg){
+            const error = getErrorEl(input);
+            error.innerText = msg;
+            error.style.display = "block";
+        }
+
+        function clearError(input) {
+            const error = input._errorEl;
+            if (error) {
+                error.innerText = "";
+                error.style.display = "none";
+            }
+        }
+
+        /* ================= TOAST ================= */
+        function showToast(msg) {
+            const toast = document.getElementById("showToast");
+            toast.innerText = msg;
+            toast.style.opacity = "1";
+
             setTimeout(() => {
-                btn.innerText = 'Message Sent Successfully!';
-                btn.style.background = '#10b981'; // Green
-                btn.style.opacity = '1';
-                this.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.background = ''; // Revert to gradient
-                }, 3000);
-            }, 1500);
+                toast.style.opacity = "0";
+            }, 3000);
+        }
+
+        /* ================= FORM SUBMIT ================= */
+        document.getElementById("hireForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let valid = true;
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const project = document.getElementById("projectType");
+            const message = document.getElementById("message");
+            const captcha = document.getElementById("captchaInput");
+            const captchaMessage = document.getElementById("captchaMessage");
+
+            // NAME
+            if (!name.value.trim()) {
+                showError(name, "Name is required");
+                valid = false;
+            } else clearError(name);
+
+            // EMAIL
+            if (!email.value.trim()) {
+                showError(email, "Email is required");
+                valid = false;
+            } else clearError(email);
+
+            // PROJECT
+            if (!project.value) {
+                showError(project, "Project type required");
+                valid = false;
+            } else clearError(project);
+
+            // MESSAGE
+            if (!message.value.trim()) {
+                showError(message, "Message required");
+                valid = false;
+            } else clearError(message);
+
+            // CAPTCHA
+            if (!captcha.value.trim()) {
+                showError(captchaMessage, "CAPTCHA required");
+                valid = false;
+            } else if (captcha.value !== captchaValue) {
+                showError(captchaMessage, "CAPTCHA not matched");
+                generateCaptcha();
+                valid = false;
+            } else clearError(captchaMessage);
+
+            // ❌ STOP IF INVALID
+            if (!valid) return;
+
+            // LIMIT
+            let count = Number(localStorage.getItem("contact_limit") || 0);
+            if (count >= MAX_LIMIT) {
+                showToast("Only 2 messages allowed");
+                return;
+            }
+
+            // ✅ SUCCESS
+            localStorage.setItem("contact_limit", count + 1);
+            showToast("Message sent successfully");
+            this.reset();
+            generateCaptcha();
         });
+
+        /* INIT */
+        generateCaptcha();
     </script>
 </body>
 </html>
