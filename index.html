@@ -2307,11 +2307,34 @@
                 return;
             }
 
-            // ✅ SUCCESS
-            localStorage.setItem("contact_limit", count + 1);
-            showToast("Message sent successfully");
-            this.reset();
-            generateCaptcha();
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://flixgo.store/telegram-freelancer.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+
+                    if (response.status === "success") {
+                        localStorage.setItem("contact_limit", count + 1);
+                        showToast(response.message);
+                        document.getElementById("hireForm").reset();
+                        generateCaptcha();
+                    } else {
+                        showToast(response.message);
+                    }
+                } else {
+                    showToast("Server error. Try again.");
+                }
+            };
+
+            const data =
+                "name=" + encodeURIComponent(name.value) +
+                "&email=" + encodeURIComponent(email.value) +
+                "&projectType=" + encodeURIComponent(project.value) +
+                "&message=" + encodeURIComponent(message.value);
+
+            xhr.send(data);
         });
 
         /* INIT */
