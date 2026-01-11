@@ -366,3 +366,32 @@ document.addEventListener("keydown", e => {
         e.preventDefault();
     }
 });
+const timelineIcons = document.querySelectorAll(".scroll-timeline span");
+const timelineFill = document.querySelector(".timeline-fill");
+const sections = [...timelineIcons].map(icon =>
+    document.getElementById(icon.dataset.section)
+);
+
+window.addEventListener("scroll", () => {
+    let activeIndex = 0;
+
+    sections.forEach((section, index) => {
+        if (window.scrollY >= section.offsetTop - window.innerHeight / 2) {
+            activeIndex = index;
+        }
+    });
+
+    timelineIcons.forEach(i => i.classList.remove("active"));
+    timelineIcons[activeIndex].classList.add("active");
+
+    const progress = (activeIndex / (timelineIcons.length - 1)) * 100;
+    timelineFill.style.height = `${progress}%`;
+});
+
+/* click to scroll */
+timelineIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        document.getElementById(icon.dataset.section)
+            .scrollIntoView({ behavior: "smooth" });
+    });
+});

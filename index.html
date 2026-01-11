@@ -33,6 +33,41 @@
 </head>
 <body>
 
+    <!-- LEFT SCROLL TIMELINE -->
+    <div class="scroll-timeline">
+
+        <span data-section="about" title="About">
+            <i class="fas fa-user"></i>
+        </span>
+
+        <span data-section="skills" title="Skills">
+            <i class="fas fa-code"></i>
+        </span>
+
+        <span data-section="experience" title="Experience">
+            <i class="fas fa-briefcase"></i>
+        </span>
+
+        <span data-section="projects" title="Projects">
+            <i class="fas fa-layer-group"></i>
+        </span>
+
+        <span data-section="services" title="Why Me">
+            <i class="fas fa-star"></i>
+        </span>
+
+        <span data-section="contact" title="Contact">
+            <i class="fas fa-envelope"></i>
+        </span>
+
+        <!-- progress line -->
+        <div class="timeline-line">
+            <div class="timeline-fill"></div>
+        </div>
+
+    </div>
+
+
     <!-- Header -->
     <header id="main-header">
         <div class="container">
@@ -69,7 +104,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content fade-in-up">
-                <span class="badge">Available for Hire</span>
+                <span class="badge">Helping Businesses Build Scalable Web Solutions</span>
                 <h1>Building Scalable Web Apps with <span class="text-gradient">Laravel & PHP</span></h1>
                 <p>I am Bavliya Vanraj, a Full-Stack Developer specialized in secure backend logic, REST APIs, and modern frontend interfaces.</p>
                 
@@ -92,6 +127,18 @@
                         <h4>100%</h4>
                         <p>Client Satisfaction</p>
                     </div>
+                </div>
+                <!-- Social Links (Profile Section) -->
+                <div class="social-links">
+                    <a href="https://github.com/bavliyavanraj" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bavliya-vanraj-772b9b20b" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:work.vanraj@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -302,44 +349,74 @@
                 <!-- Project 1 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="textdrip.png" alt="Textdrip">
+                        <img src="text-sms.png" alt="SMS & Email Marketing Automation Platform">
                     </div>
                     <div class="project-info">
-                        <h3>Text Message Marketing (SaaS Platform)</h3>
+                        <h3>SMS & Email Marketing Automation (SaaS Platform)</h3>
                         <p>
-                            Subscription-based SaaS platform providing automated messaging and drip campaigns
-                            for US-based businesses with role-based access and campaign management.
+                            A US-based SaaS marketing platform that enables businesses to run scalable
+                            SMS and email marketing campaigns using trusted third-party communication
+                            service providers. The system supports both direct and automated messaging
+                            workflows with advanced scheduling and campaign management features.
+                        </p>
+                        <p>
+                            The platform uses a cron-based scheduling system to reliably process and send
+                            SMS and email campaigns at predefined times. Users can configure automation
+                            rules, drip campaigns, and scheduled messages, while background cron jobs
+                            ensure timely delivery without impacting platform performance.
                         </p>
                         <div class="tech-stack">
                             <span>Laravel</span>
                             <span>Node.js</span>
-                            <span>REST API</span>
+                            <span>REST APIs</span>
                             <span>MySQL</span>
+                            <span>SMS Gateways</span>
+                            <span>Email Services</span>
+                            <span>Cron Jobs</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project">
+                        <a href="javascript:void(0)"
+                        class="btn btn-outline view-project"
+                        data-title="SMS & Email Marketing Automation Platform"
+                        data-description="A US-focused SaaS platform designed to help businesses execute large-scale SMS and email marketing campaigns. The system integrates multiple third-party messaging providers and uses cron-based background jobs to automate message delivery, campaign scheduling, and drip workflows."
+                        data-features="Multiple SMS Gateway Integration,Email Marketing via Mailgun,Cron-Based SMS & Email Scheduling,Automated Drip Campaigns,Direct Messaging Support,Role-Based Access Control,Campaign Analytics & Reporting,Domain Purchase Integration via API,Secure Third-Party API Integrations"
+                        data-tech="Laravel,Node.js,MySQL,REST APIs,Twilio,Infobip,SignalWire,Nexmo,Bandwidth,Mailgun,Namecheap API,Cron Jobs">
                             View Details
                         </a>
                     </div>
                 </div>
 
+
                 <!-- Project 2 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="Farmers-Choice.png" alt="Farmers Choice">
+                        <img src="Farmers-Choice.png" alt="Farmers Choice Project">
                     </div>
                     <div class="project-info">
                         <h3>Farmers Choice</h3>
                         <p>
-                            A farmer-to-farmer digital marketplace developed as a university major project,
-                            enabling product listings, secure authentication, admin approvals, and real-time communication.
+                            Farmers Choice is a farmer-to-farmer digital marketplace developed as a college major project.
+                            The platform allows farmers to directly buy and sell agricultural products without intermediaries.
+                            Farmers can list their products with images, pricing, and detailed descriptions after completing
+                            user registration and authentication.
+                        </p>
+                        <p>
+                            All product submissions are first reviewed through an admin approval system to ensure quality
+                            and authenticity. Once approved, products become visible to all users on the platform.
+                            The system also includes a real-time chat feature, enabling farmers to communicate directly
+                            for inquiries, negotiations, and smooth product transactions.
                         </p>
                         <div class="tech-stack">
-                            <span>PHP</span>
+                            <span>Core PHP</span>
                             <span>MySQL</span>
                             <span>JavaScript</span>
                             <span>Bootstrap</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project" data-title="Farmers Choice" data-description="A farmer-to-farmer digital marketplace developed as a university major project enabling direct product trading." data-features="Product Listings,Secure Authentication,Admin Approval System,Real-time Communication" data-tech="PHP,MySQL,JavaScript,Bootstrap">
+                        <a href="javascript:void(0)" 
+                        class="btn btn-outline view-project"
+                        data-title="Farmers Choice"
+                        data-description="A farmer-to-farmer digital marketplace that enables direct buying and selling of agricultural products with admin approval and real-time communication."
+                        data-features="User Registration,Product Listing with Images,Admin Approval System,Farmer-to-Farmer Chat,Secure Authentication"
+                        data-tech="Core PHP,MySQL,JavaScript,Bootstrap">
                             View Details
                         </a>
                     </div>
@@ -348,21 +425,41 @@
                 <!-- Project 3 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="Society-Management-System.png" alt="Society Management System">
+                        <img src="Society-Management-System.png" alt="Society Management System Project">
                     </div>
                     <div class="project-info">
                         <h3>Society Management System</h3>
                         <p>
-                            A comprehensive web-based system for managing residential societies including
-                            member records, maintenance tracking, notices, and admin controls.
+                            Society Management System is a comprehensive web-based application developed during
+                            my professional training period. The system is designed to efficiently manage residential
+                            society operations, including flat ownership details, occupancy status, and maintenance
+                            payment tracking.
+                        </p>
+                        <p>
+                            The platform maintains centralized records of residents, vacant flats, and visitor entries.
+                            Administrators can manage all society-related information through a secure admin panel and
+                            send important announcements or updates to all residents simultaneously via email notifications.
+                        </p>
+                        <p>
+                            The project is developed using PHP and Laravel, following a structured MVC architecture.
+                            Additionally, REST APIs were created for the mobile application team, secured using
+                            JWT (JSON Web Token) authentication to ensure safe and authorized data access across platforms.
                         </p>
                         <div class="tech-stack">
                             <span>PHP</span>
+                            <span>Laravel</span>
                             <span>MySQL</span>
                             <span>Bootstrap</span>
                             <span>jQuery</span>
+                            <span>REST API</span>
+                            <span>JWT Authentication</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project">
+                        <a href="javascript:void(0)"
+                        class="btn btn-outline view-project"
+                        data-title="Society Management System"
+                        data-description="A web-based society management platform developed during training using PHP and Laravel, featuring admin controls, maintenance tracking, email notifications, and secure mobile APIs."
+                        data-features="Flat & Ownership Management,Maintenance Tracking,Resident & Visitor Records,Email Notifications,Mobile APIs,JWT Authentication"
+                        data-tech="PHP,Laravel,MySQL,Bootstrap,jQuery,REST API,JWT">
                             View Details
                         </a>
                     </div>
@@ -371,73 +468,134 @@
                 <!-- Project 4 -->
                 <div class="project-card fade-in-up">
                     <div class="project-img">
-                        <img src="Marketing-Management-System.png" alt="Marketing Management System">
+                        <img src="Marketing-Management-System.png" alt="Marketing Management System Project">
                     </div>
                     <div class="project-info">
                         <h3>Marketing Management System</h3>
                         <p>
-                            A web-based tool to manage marketing campaigns, leads, and performance tracking
-                            with dynamic dashboards and AJAX-based data handling.
+                            Marketing Management System is a SaaS-based web application developed using PHP Laravel,
+                            focused on automating content distribution across multiple third-party platforms.
+                            The system enables users to publish blogs and media content to various platforms
+                            from a single centralized dashboard with just one click.
+                        </p>
+                        <p>
+                            The platform integrates multiple third-party APIs, including Blogger, WordPress,
+                            Joomla, Tumblr, and Vimeo, allowing seamless blog and media publishing.
+                            Additionally, video streaming and upload APIs were implemented for platforms such as
+                            YouTube, Facebook, and Instagram, enabling cross-platform video distribution directly
+                            from the system.
+                        </p>
+                        <p>
+                            The application operates on a credit-based model powered by Stripe payment integration.
+                            Users purchase credits through secure online payments, and these credits are consumed
+                            based on posting and publishing activities across different platforms.
+                            This approach ensures scalable usage and flexible monetization within the SaaS ecosystem.
                         </p>
                         <div class="tech-stack">
+                            <span>PHP</span>
                             <span>Laravel</span>
+                            <span>Third-Party APIs</span>
+                            <span>REST API Integration</span>
                             <span>AJAX</span>
                             <span>JavaScript</span>
                             <span>MySQL</span>
+                            <span>Stripe Payment Gateway</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project">
+                        <a href="javascript:void(0)"
+                        class="btn btn-outline view-project"
+                        data-title="Marketing Management System"
+                        data-description="A SaaS-based marketing automation platform built with Laravel, enabling single-click content publishing across multiple blogging and video platforms using third-party APIs."
+                        data-features="Multi-Platform Posting,Third-Party API Integration,Video Upload & Streaming,Credit-Based System,Stripe Payments,Centralized Dashboard"
+                        data-tech="PHP,Laravel,REST APIs,AJAX,JavaScript,MySQL,Stripe">
                             View Details
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
+               <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
                     <div class="project-img">
-                        <img src="Sprint-Management-Tool.png" alt="Sprint Management Tool">
+                        <img src="Sprint-Management-Tool.png" alt="Sprint Management Tool Project">
                     </div>
                     <div class="project-info">
                         <h3>Sprint Management Tool</h3>
                         <p>
-                            A project and sprint tracking tool designed to monitor team productivity,
-                            task progress, and sprint cycles using a modern frontend and API-driven backend.
+                            Sprint Management Tool is an internal productivity and task management system developed
+                            for our own company to streamline sprint planning, task tracking, and employee performance monitoring.
+                            The platform provides a centralized view of all tasks assigned to employees along with
+                            the time spent on each task.
+                        </p>
+                        <p>
+                            The system supports role-based access control with multiple user roles such as Developer,
+                            QA, HR, and Admin. Each role has specific permissions to manage tasks, view reports,
+                            and access sprint-related data. Weekly task planning and daily task execution are managed
+                            efficiently within the platform.
+                        </p>
+                        <p>
+                            At the end of each working day, employees can generate a complete work report with a single click
+                            and directly send it to their manager via email. The application also includes a real-time
+                            notification system that alerts users whenever a new task is assigned to them.
+                        </p>
+                        <p>
+                            This project was fully developed using AI-assisted development, where the entire application
+                            was created through well-defined prompts without manually writing individual code files.
+                            Laravel Vite was used to ensure fast page loading and a smooth user experience.
                         </p>
                         <div class="tech-stack">
+                            <span>Laravel</span>
+                            <span>Vite</span>
+                            <span>MySQL</span>
                             <span>Node.js</span>
                             <span>REST API</span>
-                            <span>React</span>
+                            <span>Role & Permission Management</span>
+                            <span>Notification System</span>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-outline view-project">
+                        <a href="javascript:void(0)"
+                        class="btn btn-outline view-project"
+                        data-title="Sprint Management Tool"
+                        data-description="An internal sprint and task management system designed for tracking employee productivity, role-based access control, notifications, and automated daily work reports."
+                        data-features="Task & Time Tracking,Weekly Sprint Planning,Role-Based Access Control,Daily Work Report Generation,Email Reports,Real-Time Notifications"
+                        data-tech="Laravel,Vite,MySQL,Node.js,REST API,React">
                             View Details
                         </a>
                     </div>
                 </div>
+
 
                 <!-- Project 6 -->
                 <div class="project-card fade-in-up" style="transition-delay: 0.1s;">
                     <div class="project-img">
                         <img src="iotzone.png" alt="IoTZone - Tech & Electronics Platform">
                     </div>
-
                     <div class="project-info">
                         <h3>IoTZone – Tech & Electronics Platform</h3>
-
                         <p>
-                            A full-featured technology and electronics content platform focused on microcontrollers,
-                            electronic components, tutorials, and technical guides. The website is built with
-                            SEO-first architecture, fast-loading UI, and a custom admin panel for content management.
+                            IoTZone is a self-developed technology and electronics content platform built using
+                            PHP Laravel. The website focuses on publishing high-quality articles related to
+                            microcontrollers, electronic components, technical tutorials, and detailed guides.
+                            It features a clean, user-friendly frontend where visitors can easily browse and read articles.
                         </p>
-
+                        <p>
+                            A custom admin panel has been developed to manage blog posts, categories, and content efficiently.
+                            All SEO-related settings such as meta title, meta description, and meta keywords are dynamically
+                            managed from the admin panel and automatically reflected on the frontend for each article.
+                        </p>
+                        <p>
+                            The platform also includes a comment system that allows users to interact with articles
+                            and share their feedback. The entire website is designed with an SEO-first approach,
+                            ensuring fast page loading, proper indexing, and optimized visibility on search engines.
+                            Visitors can explore the live website using the link provided below.
+                        </p>
                         <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                             <span>PHP</span>
+                            <span>Laravel</span>
                             <span>MySQL</span>
-                            <span>SEO</span>
-                            <span>Admin Panel</span>
+                            <span>JavaScript</span>
+                            <span>jQuery</span>
+                            <span>CSS</span>
+                            <span>SEO Optimization</span>
+                            <span>Custom Admin Panel</span>
                         </div>
-
                         <a href="https://iotzone.in/" target="_blank" class="btn btn-outline view-project">
                             Visit Website
                         </a>
@@ -447,30 +605,44 @@
                 <!-- Project 7 -->
                 <div class="project-card fade-in-up" style="transition-delay: 0.15s;">
                     <div class="project-img">
-                        <!-- Replace this image with your website screenshot or logo -->
                         <img src="codemastertool.png" alt="CodeMasterTool - Online Code Compiler & Developer Tools">
                     </div>
-
                     <div class="project-info">
-                        <h3>CodeMasterTool - Online Code Compiler & Utilities</h3>
+                        <h3>CodeMasterTool – Online Code Compiler & Developer Utilities</h3>
                         <p>
-                            CodeMasterTool is a free, web-based developer platform that allows users to write,
-                            execute, and test code across multiple programming languages. The platform also
-                            provides powerful utility tools such as QR code generator, age calculator, website
-                            analyzer, and code validators — all accessible without registration.
+                            CodeMasterTool is a comprehensive, free-to-use developer platform built using Core PHP,
+                            designed to provide a wide range of online coding, debugging, and productivity tools.
+                            The platform offers multiple language compilers, live editors, validators, and utility
+                            tools that help developers work faster and more efficiently from a single dashboard.
                         </p>
-
+                        <p>
+                            The platform includes online compilers and runners for PHP, JavaScript (Node.js),
+                            C, C++, and Python, along with live editors such as HTML Editor, SVG Editor,
+                            Canvas Editor, WebGL Editor, and Canvas Studio for creative and graphical development.
+                            These tools allow developers to write, execute, test, and visualize code directly in the browser.
+                        </p>
+                        <p>
+                            In addition to coding tools, CodeMasterTool provides a rich collection of developer utilities
+                            including XML Validator, JSON Formatter, cURL API Tester, Website Analyzer, QR Code Generator,
+                            Barcode Generator, Password Generator, Slug Converter, Emoji Picker, Age Calculator,
+                            Time Difference Calculator, and Time Zone Converter.
+                        </p>
+                        <p>
+                            The website is built with an SEO-friendly architecture and includes dedicated SEO-related pages
+                            to ensure better search engine visibility. All tools are optimized for performance,
+                            accessibility, and usability, making the platform suitable for beginners as well as
+                            experienced developers.
+                        </p>
                         <div class="tech-stack">
+                            <span>Core PHP</span>
                             <span>HTML5</span>
                             <span>CSS3</span>
                             <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>Code Compiler</span>
-                            <span>Multi-Language Support</span>
-                            <span>SEO Optimized</span>
+                            <span>Online Code Compilers</span>
+                            <span>Developer Utilities</span>
+                            <span>Telegram Bot</span>
+                            <span>SEO Optimized Pages</span>
                         </div>
-
                         <a href="https://codemastertool.com/" target="_blank" class="btn btn-outline view-project">
                             Visit Website
                         </a>
@@ -579,17 +751,33 @@
     <!-- Project Modal -->
     <div id="projectModal" class="portfolio-modal">
         <div class="portfolio-modal-content">
-            <button class="modal-close" id="closeModal">&times;</button>
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-            <ul id="modalFeatures"></ul>
-            <span id="modalTech" class="modal-tech"></span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+                <ul id="modalFeatures"></ul>
+            </div>
+            <div id="modalTech" class="modal-tech"></div>
         </div>
     </div>
 
     <footer>
         <div class="container">
             <p>&copy; <span id="CurrentYear"></span> Bavliya Vanraj. Built with expertise.</p>
+            <div class="footer-social">
+                <a href="https://github.com/bavliyavanraj" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bavliya-vanraj-772b9b20b" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:work.vanraj@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
         </div>
     </footer>
 
